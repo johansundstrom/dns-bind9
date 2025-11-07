@@ -23,7 +23,7 @@ Alla konfigurationer ligger i...
 
 Kopplingarna framgår av bilden. Pilen pekar mot referens
 
-
+![Alt text](bind-files.png "Konfigurerbara filer i BIND")
 
 ## named.conf
 
