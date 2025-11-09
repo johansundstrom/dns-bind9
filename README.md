@@ -25,9 +25,19 @@ Sök därefter upp en fri tjänst på Internet som låter dig administrera DNS-p
 | aktuell domän | DNS-tjänst | - Aldrig - | 4 jun 2026 |
 
 Notera kolumn 3 och 4. Kolumn 3 beskriver tjänsten hos *Simply.com*. Kolumn 4 är 
-Kolumnen *Utgångsdatum för domän* är förfallodatum hos Internetstiftelsen som är registrator för .se-adresser. man kan registera och betala för 12-120 månader. Efter domaännamnet förfasllit får den i 10 dagar status *Expired*.
+Kolumnen *Utgångsdatum för domän* är förfallodatum hos Internetstiftelsen som är registrator för .se-adresser. man kan registera och betala för 12-120 månader. Efter domaännamnet förfallit får den i 10 dagar status *Expired*.
 
+På kontrollpanelen i *Simply.com* klicka ```Hantera DNS-inställningar för din domän```. 
 
+![Alt text](simply-02.png "DNS-administration")
+
+Registrerade poster i DNS kan ta allt från 5-60 minuter att slå genom i hela världen, om du därför använder Google's DNS Servrar, ha tålamod.
+
+Notera också att många personliga internettjänster bygger på dynamiska IP-adresser. Din router's WAN-adress är dynamiskt tilldelad och kan specellt byta adress vid varje strömavbrott i hemmet. Den enkla lösningen är att ersätta din WAN-IP med den nya i kontrollpanelen men den rekommenderade lösningen på detta är att låta en klient på ditt nätverk, t.ex en Linux enher köra ett CRON-jobb var 15:e minut enligt följande...
+
+```curl -s -u "ACCOUNTNAME:APIKEY" "https://api.simply.com/2/ddns/?domain=example.com&hostname=home.example.com"```
+
+*Accountname* och *APIKEY* finns under Allmänn information i kotrollpanelen. 
 
 ## Installera
 
