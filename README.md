@@ -4,9 +4,19 @@
 
 DNS-tjänster kan uppfylla minst 1 av tre olika scenarier.
 
-* Lokal DNS som upplöser namn till IP lokalt. Oftast används domännamnet ```home.local``` i dessa fall. T.ex. ```nas.home.local```.
-* DNS tjänst på Internet (på WAN) som pekar ut din personliga server (på LAN). I texten benämnd som ```domain.se```. Exempelvis ```ftp.domain.se```
-* Split Horizon (Split DNS) Båda ovanstående scenarier samtidigt
+1. *Internet DNS* DNS tjänst på Internet (på WAN) som pekar ut din personliga server (på LAN). I texten benämnd som ```domain.se```. Exempelvis ```ftp.domain.se```.
+2. Lokal DNS som upplöser namn till IP lokalt. Oftast används domännamnet ```home.local```, exempelvis ```nas.home.local```.
+3. Split Horizon (eller *Split DNS*) Båda ovanstående scenarier samtidigt
+
+## 1. Internet DNS
+
+Denna tjänst ger möjlighet att från internet ange domänadresser som pekar in i ett lokal nät. Det kan t.ex. vara att nå en webbserver, en FTP eller någon annan lokal service. För att detta ska fungera krävs att ha en domänadress. 
+
+Min approach är att registera en .se-adress. Den blir personlig och lätt att komma ihåg. Annat tips är också att hålla den så kort som möjligt kort vilket innebär effektiva adresser om man ska uppge dessa ofta. 
+
+Sök därefter upp en fri tjänst på Internet som låter dig administrera DNS-poster själv. Ett sådant är *simply.com*. Om man bara är ute efter att hantera DNS på Internet så är *Simply.com* gratis och låter för tillfället att göra detta på livstid, utan att ens registera ditt kontokort. Anvisningar följer därför just *Simply.com*.
+
+
 
 ## Installera
 
@@ -71,3 +81,5 @@ options {
     listen-on-v6 { any; };
 };
 ```
+
+2 
