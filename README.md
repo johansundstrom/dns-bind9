@@ -52,9 +52,13 @@ Första gången crontab körs skapas en fil. Ubuntu 22.04 användare behöver v�
 
 ```crontab -e```
 
-Starta cronjob
+Skriv in nedanstående och spara
 
 ```*/15 * * * * /path/to/script.sh > /dev/null 2>&1```
+
+Lista cronjob
+
+```crontab -l```
 
 
 Sista steg är att göra *Port Forwarding* på din router. Detta är en WAN-inställning och betyder att respektive förfrågan från Internet vidarebefordras på rätt TCP-port. Om man söker ```www.domän.se``` så använder protokollet HTTP standardporten 80. Om en webbserver finns i det lokala nätverket på IP-adress 192.168.1.40 så ska alltså följande inställning göras på din router...
