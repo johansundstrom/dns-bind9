@@ -61,7 +61,9 @@ Sista steg är att göra *Port Forwarding* på din router. Detta är en WAN-inst
 
 | Service name | External Port | Internal Port | Internal IP Address | Protocoll | 
 | --- | --- | --- | --- | --- |
-| WEB | 80 | 80 | 192.168.1.40 | TCP |
+| WEB* | 80 | 80 | 192.168.1.40 | TCP |
+
+*valfritt
 
 [Övriga TCP-portar enligt standard](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
