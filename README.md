@@ -12,11 +12,20 @@ DNS-tjänster kan uppfylla minst 1 av tre olika scenarier.
 
 Denna tjänst ger möjlighet att från internet ange domänadresser som pekar in i ett lokal nät. Det kan t.ex. vara att nå en webbserver, en FTP eller någon annan lokal service. För att detta ska fungera krävs att ha en domänadress. 
 
-Min approach är att registera en .se-adress. Den blir personlig och lätt att komma ihåg. Annat tips är också att hålla den så kort som möjligt kort vilket innebär effektiva adresser om man ska uppge dessa ofta. 
+Min approach är att registera en .se-adress. Den blir personlig och lätt att komma ihåg. Tips är också att hålla den så kort som möjligt kort vilket innebär effektiva adresser om man ska uppge dessa ofta. 
 
-Sök därefter upp en fri tjänst på Internet som låter dig administrera DNS-poster själv. Ett sådant är *simply.com*. Om man bara är ute efter att hantera DNS på Internet så är *Simply.com* gratis och låter för tillfället att göra detta på livstid, utan att ens registera ditt kontokort. Anvisningar följer därför just *Simply.com*.
+[Återförsäljare för .se-adresser](https://internetstiftelsen.se/domaner/registrera-ett-domannamn/aterforsaljare/)
+
+Sök därefter upp en fri tjänst på Internet som låter dig administrera DNS-poster själv. Ett sådant är *simply.com*. Om man bara är ute efter att hantera DNS på Internet så är *Simply.com* gratis och låter för tillfället att göra detta på livstid, utan att ens registera ditt kontokort. Anvisningar följer därför för just *Simply.com*.
 
 ![Alt text](simply-01.png "Produkter i Simply kontrollpanel")
+
+| Referens | Produkt | Utgångsdatum för produkt | Utgångsdatum för domän |
+| ---- | --- | --- | --- |
+| aktuell domän | DNS-tjänst | - Aldrig - | 4 jun 2026 |
+
+Notera kolumn 3 och 4. Kolumn 3 beskriver tjänsten hos *Simply.com*. Kolumn 4 är 
+Kolumnen *Utgångsdatum för domän* är förfallodatum hos Internetstiftelsen som är registrator för .se-adresser. man kan registera och betala för 12-120 månader. Efter domaännamnet förfasllit får den i 10 dagar status *Expired*.
 
 
 
