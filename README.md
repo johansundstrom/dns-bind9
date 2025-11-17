@@ -2,15 +2,15 @@
 
 ## Bakgrund
 
-DNS-tjänster kan uppfylla minst 1 av tre olika scenarier.
+DNS-tjänster kan uppfylla minst en av tre olika scenarier.
 
-1. *Internet DNS* DNS tjänst på Internet (på WAN) som pekar ut din personliga server (på LAN). I texten benämnd som ```domain.se```. Exempelvis ```ftp.domain.se```.
+1. **Internet DNS** eller DNS-tjänst på Internet (på WAN) som pekar ut din personliga server (på LAN). I texten benämnd som ```domain.se```. Exempelvis ```ftp.domain.se```.
 2. Lokal DNS som upplöser namn till IP lokalt. Oftast används domännamnet ```home.local```, exempelvis ```nas.home.local```.
 3. Split Horizon (eller *Split DNS*) Båda ovanstående scenarier samtidigt
 
 ## 1. Internet DNS
 
-Denna tjänst ger möjlighet att från internet ange domänadresser som pekar in i ett lokal nät. Det kan t.ex. vara att nå en webbserver, en FTP eller någon annan lokal service. För att detta ska fungera krävs att ha en domänadress. 
+Denna tjänst ger möjlighet att från internet ange domänadresser som pekar till ett lokal nät. Det kan t.ex. vara att nå en webbserver, en FTP eller någon annan lokal service. För att detta ska fungera krävs att ha en domänadress. 
 
 Min approach är att registera en .se-adress. Den blir personlig och lätt att komma ihåg. Tips är också att hålla den så kort som möjligt kort vilket innebär effektiva adresser om man ska uppge dessa ofta. 
 
@@ -61,7 +61,7 @@ Lista cronjob
 ```crontab -l```
 
 
-Sista steg är att göra *Port Forwarding* på din router. Detta är en WAN-inställning och betyder att respektive förfrågan från Internet vidarebefordras på rätt TCP-port. Om man söker ```www.domän.se``` så använder protokollet HTTP standardporten 80. Om en webbserver finns i det lokala nätverket på IP-adress 192.168.1.40 så ska alltså följande inställning göras på din router...
+Sista steg är att göra *Port Forwarding* på din router. Detta är en WAN-inställning och betyder att respektive förfrågan från Internet vidarebefordras till rätt TCP-port. Om man söker ```www.domän.se``` så använder protokollet HTTP standardporten 80. Om en webbserver finns i det lokala nätverket på IP-adress 192.168.1.40 så ska alltså följande inställning göras på din router...
 
 | Service name | External Port | Internal Port | Internal IP Address | Protocoll | 
 | --- | --- | --- | --- | --- |
@@ -71,7 +71,9 @@ Sista steg är att göra *Port Forwarding* på din router. Detta är en WAN-inst
 
 [Övriga TCP-portar enligt standard](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
-## Installera
+## 2. Lokal DNS
+
+## Installera BIND9 (de facto standard)
 
 * Förutsättningar: samtliga instruktioner gäller linux, främst Ubuntu. 
 * Hårdvara: RPI (Debian), PC (Ubuntu Server)
